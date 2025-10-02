@@ -1,13 +1,24 @@
+body {
+    color: #222;
+    background: dodgerblue;
+    margin: 0px;
+    padding: 0px;
+}
+
 .title {
     font-weight: bold;
 }
 
 .main_content {
-    padding: 20px;
+    padding: 0px;
+    padding-bottom: 50px;
+    margin:  0px;
+    text-align: center;
+    background-color: white;
 }
 
 nav {
-    background-color: #000;
+    background-color: dodgerblue;
     padding: 10px;
     font-size: 20px;
     color: white;
@@ -16,4 +27,40 @@ nav {
 nav > a {
     color: white;
     margin-right: 10px;
+}
+
+footer {
+    color: white;
+    font-size: 14px;
+}
+
+.hero {
+    color: white;
+    font-size: 14px;
+
+}
+
+.hero h1 {
+    font-size: 24px;
+}
+.hero a {
+    color: white;
+    text-decoration: underline;
+}
+.hero-inner{
+    max-width: 450px;
+    align-content: center;
+}
+
+.pypi-stats{
+    background-color: #ececec;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+}
+.pypi-stats .stat {
+    display: inline-block;
+    min-width: 170px;
+    padding: 10px;
 }
