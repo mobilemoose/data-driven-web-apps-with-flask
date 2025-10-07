@@ -126,8 +126,13 @@
 
                     <h2>Project description</h2>
 
+                    {% if package.description  %}
                     <pre>{{ package.description.strip() }}
                         </pre>
+                    {% else %}
+                    <pre>No description available
+                        </pre>
+                    {% endif %}
 
 
                 </div>

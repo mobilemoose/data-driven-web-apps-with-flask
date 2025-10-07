@@ -27,7 +27,7 @@ class Package(SqlAlchemyBase):
     license: str = sa.Column(sa.String, index=True)
 
     # releases relationship
-    releases: Mapped[Release] = orm.relationship(
+    releases: Mapped[list[Release]] = orm.relationship(
         'Release',
         order_by=[
             Release.major_ver.desc(),
@@ -39,7 +39,6 @@ class Package(SqlAlchemyBase):
 
     def __repr__(self):
         return '<Package {}>'.format(self.id)
-
 
 # p = Package()  # one query
 #

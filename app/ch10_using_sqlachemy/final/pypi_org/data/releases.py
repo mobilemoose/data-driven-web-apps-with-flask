@@ -24,4 +24,4 @@ class Release(SqlAlchemyBase):
 
     @property
     def version_text(self):
-        return '{}.{}.{}'.format(self.major_ver, self.minor_ver, self.build_ver)
+        return f'{self.major_ver}.{self.minor_ver}.{self.build_ver}'
