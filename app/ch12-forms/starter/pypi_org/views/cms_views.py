@@ -1,6 +1,7 @@
 import flask
 
 from pypi_org.infrastructure.view_modifiers import response
+from pypi_org.infrastructure import cookie_auth
 import pypi_org.services.cms_service as cms_service
 
 blueprint = flask.Blueprint('cms', __name__, template_folder='templates')

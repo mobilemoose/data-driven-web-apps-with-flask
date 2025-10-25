@@ -1,5 +1,5 @@
 {% extends "shared/_layout.html" %}
-{% block title %}About PyPI Demo{% endblock %}
+{% block title %}PyPI Demo Registration{% endblock %}
 
 {% block main_content %}
 
@@ -7,12 +7,16 @@
     <form action="" method="POST" class="account-form">
         <h1>Register at PyPi</h1>
 
-        <input type="text" placeholder=" Your name" class="form-control">
-        <input type="text" placeholder=" Your e-mail address" class="form-control">
-        <input type="password" placeholder=" Password" class="form-control">
-        <input type="password" placeholder=" Confirm Password" class="form-control">
+        <input name="name" type="text" placeholder=" Your name" class="form-control" value = {{ name }}>
+        <input name="email" type="text" placeholder=" Your e-mail address" class="form-control" value = {{ email }}>
+        <input name="password" type="password" placeholder=" Password" class="form-control" value = {{ password }}>
+        <input name="passconf" type="password" placeholder=" Confirm Password" class="form-control" value = {{ passconf }}>
 
         <button type="submit" class="btn btn-danger">Register</button>
+        <div style="clear: both;"></div>
+        {% if error %}
+        <div class="error-msg">{{ error }}</div>
+        {% endif %}
     </form>
     </div>
 

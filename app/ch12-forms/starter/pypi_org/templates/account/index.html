@@ -1,11 +1,11 @@
 {% extends "shared/_layout.html" %}
-{% block title %}About PyPI Demo{% endblock %}
+{% block title %}PyPI Demo{% endblock %}
 
 {% block main_content %}
-    <h1>About Python Package Index</h1>
+    <h1>Demo PyPi</h1>
 
     <div>
-        This is our demo app for our Flask course.
+        {% if user %} Welcome to your account {{ user.name }} {% endif %}
     </div>
 {% endblock %}
 
